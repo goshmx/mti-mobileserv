@@ -27,7 +27,6 @@ class Model_places extends CI_Model {
         else{
             return false;
         }
-
     }
 
     function elimina($tabla,$id){
@@ -36,7 +35,6 @@ class Model_places extends CI_Model {
     }
 
     function inserta($tabla,$datos){
-
         $query = $this->db->insert($tabla, $datos);
         return $query;
     }
