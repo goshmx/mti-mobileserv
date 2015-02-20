@@ -26,7 +26,7 @@ class Model_table extends CI_Model {
             'usuario' => $nombre
         );
         $this->db->insert('usuarios', $data);
-        $insert = $this->db->query("CREATE TABLE `".$nombre."_places` (  `id` int(11) NOT NULL AUTO_INCREMENT,  `name` text COLLATE utf8_spanish_ci NOT NULL,  `lat` text COLLATE utf8_spanish_ci NOT NULL,  `lng` text COLLATE utf8_spanish_ci NOT NULL,  `url` text COLLATE utf8_spanish_ci NOT NULL,  PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=1 ;");
+        $insert = $this->db->query("CREATE TABLE `".$nombre."_places` (  `id` int(11) NOT NULL AUTO_INCREMENT,  `name` text COLLATE utf8_spanish_ci NOT NULL, `descripcion` text COLLATE utf8_spanish_ci NOT NULL,  `lat` text COLLATE utf8_spanish_ci NOT NULL,  `lng` text COLLATE utf8_spanish_ci NOT NULL,  `url` text COLLATE utf8_spanish_ci NOT NULL,  PRIMARY KEY (`id`)) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci AUTO_INCREMENT=1 ;");
         return $insert;
     }
 

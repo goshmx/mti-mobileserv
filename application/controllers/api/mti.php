@@ -72,6 +72,7 @@ class Mti extends REST_Controller
     function inserta_put(){
         $tabla = $this->get('user');
         $name = $this->put('name');
+        $descripcion = $this->put('descripcion');
         $lat = $this->put('lat');
         $lng = $this->put('lng');
         $url = $this->put('url');
@@ -82,6 +83,7 @@ class Mti extends REST_Controller
             $tabla = $tabla."_places";
             $insert_places = array(
                 'name' => $name,
+                'descripcion' => $descripcion,
                 'lat' => $lat,
                 'lng' => $lng,
                 'url' => $url
